@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RetriveCacheInfo {
+public class RetriveCacheInfo   {
 
 	private static Map<String, UserInfo> userData = new HashMap<String, UserInfo>();
 
@@ -24,7 +24,8 @@ public class RetriveCacheInfo {
 
 	public static void getInfo() throws SQLException {
 		Connection connection = null;
-		ResultSet results = null;2
+		ResultSet results = null;
+		PreparedStatement ps=null;
 		try {
 			// Load the MySQL JDBC driver
 			String driverName = "com.mysql.jdbc.Driver";
